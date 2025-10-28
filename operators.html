@@ -6,22 +6,62 @@
     </head>
 
     <body>
+        <h1>Data Types:</h1>
+        <p>A string; let userName = "P_Deep"; </p>
+        <p> A number can be represented as in a decimal or without a decimal. Eg; let number = 3.14;
+            or let num = 3;
+        </p>
         <h1> Displaying </h1>
         <h3> Questions </h3>
         <p> The values for x and y are 5 and 10, respectively. What will be the value of z if z = x + y. </p>
 
         <p>The values for a and b are 3 and 9, respectively. What will be thevalue of c, if c = a * b. </p>
 
+        <p> The values for m and n are 2 and 2, respectively. What will be the value of z, if o = m - n. </p>
+
+        <p> Now the values for p, and q are 20 and 4, respectively. What will be the value of r, if:
+            a. r = p % q;
+            b. r = p ** q;
+            c. r = p / q;
+            d. r = (p**q) + (p*q);
+        </p>
+
+        <h3> Answers </h3>
+        <p id="Addition"></p>
+        <p id="Multiplication"></p>
+        <p id="Subtraction"></p>
+        <p id="Answers.a"></p>
+        <p id="Answers.b"></p>
+        <p id="Answers.c"></p>
+        <p id="Answers.d"></p>
+
 
         <script>
             //This gives two pop-ups. I don't want the pop-ups so I need to see what to do.
+            // So, I figured out what to do. Use innerHTML instead of alert.
             let x = 5;
             let y = 10;
             let z = x + y;
-            alert (z);
+            document.getElementById("Addition").innerHTML = z;
 
             let a = 3; let b = 9; let c = a * b;
-            alert(c);
+            document.getElementById("Multiplication").innerHTML = c;
+
+            let m = 2; let n = 2; let o = m - n;
+            document.getElementById("Subtraction").innerHTML = o;
+
+            let p = 20; let q = 4; var r = p % q;
+            document.getElementById("Answers.a").innerHTML = r;
+            
+            var r = p**q;
+            document.getElementById("Answers.b").innerHTML = r;
+            
+            var r = p / q;
+            document.getElementById("Answers.c").innerHTML = r;
+
+            var r = (p ** q) + (p * q);
+            document.getElementById("Answers.d").innerHTML = r;
+            
         </script>
     </body>
 </html>
